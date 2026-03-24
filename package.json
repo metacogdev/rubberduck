@@ -1,5 +1,5 @@
 {
-  "name": "rubberduck",
+  "name": "@metacogdev/rubberduck",
   "version": "0.1.0",
   "description": "A rubber duck for your agent. It listens, quacks, and produces a structured log.",
   "author": "Metacognitive Development <metacog.dev@proton.me>",
