@@ -1,10 +1,18 @@
 use rubberduck::{Session, EntryKind};
 use std::io::{self, BufRead, Write};
 
+const DUCK: &str = r#"
+    __
+  <(o )___
+   ( ._> /
+    `---'
+"#;
+
 fn main() {
     let mut args = std::env::args().skip(1);
     let format = args.next().unwrap_or_default();
 
+    eprint!("{DUCK}");
     eprintln!("What are you working on?");
     eprint!("> ");
     io::stderr().flush().unwrap();

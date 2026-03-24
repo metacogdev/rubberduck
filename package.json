@@ -1,13 +1,22 @@
 {
   "name": "rubberduck",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A rubber duck for your agent",
+  "bin": {
+    "rubberduck": "./bin/rubberduck"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cargo build --release && npm run postbuild",
+    "postbuild": "mkdir -p bin && cp target/release/rubberduck bin/rubberduck",
+    "build:debug": "cargo build",
+    "test": "cargo test",
+    "lint": "cargo clippy -- -D warnings",
+    "format": "cargo fmt",
+    "format:check": "cargo fmt -- --check",
+    "clean": "cargo clean && rm -rf bin",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "ISC"
 }
