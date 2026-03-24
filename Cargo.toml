@@ -2,6 +2,14 @@
 name = "rubberduck"
 version = "0.1.0"
 edition = "2024"
+authors = ["Metacognitive Development <metacog.dev@proton.me>"]
+description = "A rubber duck for your agent. It listens, quacks, and produces a structured log."
+license = "MIT"
+repository = "https://github.com/metacogdev/rubberduck"
+homepage = "https://github.com/metacogdev/rubberduck"
+readme = "README.md"
+keywords = ["debugging", "logging", "agent", "cli"]
+categories = ["command-line-utilities", "development-tools::debugging"]
 
 [dependencies]
 chrono = { version = "0.4", features = ["serde"] }

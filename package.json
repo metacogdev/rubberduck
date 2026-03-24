@@ -1,10 +1,33 @@
 {
   "name": "rubberduck",
   "version": "0.1.0",
-  "description": "A rubber duck for your agent",
+  "description": "A rubber duck for your agent. It listens, quacks, and produces a structured log.",
+  "author": "Metacognitive Development <metacog.dev@proton.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metacogdev/rubberduck.git"
+  },
+  "homepage": "https://github.com/metacogdev/rubberduck",
+  "bugs": {
+    "url": "https://github.com/metacogdev/rubberduck/issues"
+  },
+  "keywords": [
+    "rubber-duck",
+    "debugging",
+    "logging",
+    "agent",
+    "cli",
+    "rust"
+  ],
   "bin": {
     "rubberduck": "./bin/rubberduck"
   },
+  "files": [
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "cargo build --release && npm run postbuild",
     "postbuild": "mkdir -p bin && cp target/release/rubberduck bin/rubberduck",
@@ -15,8 +38,5 @@
     "format:check": "cargo fmt -- --check",
     "clean": "cargo clean && rm -rf bin",
     "prepublishOnly": "npm run build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
